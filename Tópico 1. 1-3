@@ -1,0 +1,44 @@
+1° Questão
+#include <stdio.h>
+
+int main() {
+    int segundos, h, m, s, resto;
+
+    printf("Digite uma quantidade de segundos: ");
+    scanf("%d", &segundos);
+    
+    h = segundos / 3600;
+    resto = segundos % 3600;
+    m = resto / 60;
+    s = resto % 60;
+    printf("%d Hora(s) %d Minuto(s) %d Segundo(s)\n", h, m, s);
+
+    return 0;
+}
+
+2° Questão
+#include <stdio.h>
+
+
+int main()
+
+{
+
+   float a,b,c,m;
+
+   printf("Digite 3 valores \n");
+
+   scanf("%2f",&a);
+
+   scanf("%2f",&b);
+
+   scanf("%2f",&c);
+
+   m = (a+b+c)/3;
+
+   printf("O valor da media eh:%0.2f", m);
+
+
+   return 0;
+
+}
