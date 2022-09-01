@@ -475,8 +475,6 @@ int main(){
     }
         
  }
-
-
 15° Questão
 
 #include <stdio.h>
