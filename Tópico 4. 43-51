@@ -1,3 +1,39 @@
+  Questão 43:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+   void situacao_aluno(void);
+   situacao_aluno();
+
+
+}
+
+
+void situacao_aluno(void)
+{
+    int nota, faltas, horas, carga, Semestre;
+
+    printf("Digite sua media final:");
+    scanf("%d", &nota);
+    printf("Digite o numero de faltas:");
+    scanf("%d", &faltas);
+    printf("Digite digite a carga horaria do semestre:");
+    scanf("%d", &carga);
+
+    horas = (carga * 180) - (faltas * carga);
+    Semestre = (carga * 180) * 0.75;
+
+    if((horas >= Semestre) && (nota >= 60)){
+       printf(" -----1-----");
+       }
+       else{
+        printf("-----0-----");
+       }
+
+}
 44° QUESTAO
 #include <stdio.h>
 #include <math.h>
@@ -45,6 +81,76 @@ int main()
         } while (numero != 0);
     printf("-");}
 }
+
+46° QUESTAO
+
+#include <stdio.h>
+
+int DIAS(int mes, int ano);
+
+main(){
+  int mes, ano;
+  printf("Digite o mes : ");
+  scanf("%d",&mes);
+  printf("Digite o ano : ");   
+  scanf("%d", &ano);
+  
+  printf("Numero de dias : %d",DIAS(mes,ano));  
+    
+  printf("\n\n");  
+  system("pause");   
+}
+
+int DIAS(int mes, int ano){
+   int dias;
+   switch (mes) {
+     case 1 :
+       dias = 31;
+       break;
+     case 2 :
+       if (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)){   
+         printf("\nANO BISSEXTO\n");
+         dias = 29;
+         }
+       else
+         dias = 28;   
+       break;
+     case 3 :
+       dias = 31;
+       break;
+     case 4 :
+       dias = 30;
+       break;
+     case 5 :
+       dias = 31;
+       break;
+     case 6 :
+       dias = 30;
+       break;
+     case 7 :
+       dias = 31;
+       break;
+     case 8 :
+       dias = 31;
+       break;
+     case 9 :
+       dias = 30;
+       break;
+     case 10 :
+       dias = 31;
+       break;
+     case 11 :
+       dias = 30;
+       break;
+     case 12 :
+       dias = 31;
+       break;                                
+          
+   } 
+   return dias; 
+
+}
+
 
 47° QUESTAO
 #include <stdio.h>
@@ -145,6 +251,38 @@ int main(){
  printf("Tempo de jogo foi %d minutos",partida);
  return 0;
 }
+49° QUESTAO
+  
+  #include <stdio.h>
+#include <math.h>
+
+ int main()
+{
+    int arredonda (doubleX);
+    arredonda();
+
+
+}
+int arredonda ()
+{
+    float doubloX;
+
+    printf("Digite o numero flutuante:");
+    scanf("%f", &doubloX);
+
+    if (doubloX > 0){
+        printf("%f", ceil(doubloX));
+
+    }
+    else if (doubloX < 0){
+        printf("-%f", ceil(-doubloX));
+    }
+    else{
+        printf("O numero nao pode ser arredondado");
+    }
+}
+
+
 
 50° QUESTAO 
 #define _CRT_SECURE_NO_WARNINGS
@@ -156,8 +294,6 @@ unsigned int calculaParidade (unsigned char b);
 int main()
 
 {
-
-   
 
    unsigned char nome[101];
 
@@ -183,11 +319,7 @@ unsigned int calculaParidade (unsigned char b)
 
 {
 
-   
-
    int x = (int)b;
-
-   
 
    int dgs[8];
 
@@ -198,15 +330,11 @@ unsigned int calculaParidade (unsigned char b)
    while(x > 1)
 
    {
-
-      
-
+  
        dgs[i] = x % 2;
 
        i--;
-
-       
-
+   
        x /= 2;
 
    }
@@ -219,34 +347,26 @@ unsigned int calculaParidade (unsigned char b)
 
        if(dgs[j] == 1)
 
-       {
-
-          
-
+       {          
            cont++;
-
        }
 
    }
 
    if((cont % 2) == 0)
 
-   {
-
-       
-
+   {      
        return 0;
-
    }
 
    else
 
    {
-
-       
-
        return 1;
-
    }
 
 }
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
