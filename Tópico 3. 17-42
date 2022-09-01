@@ -115,7 +115,8 @@ int main() {
  
  return 0;
 }
-
+  21° Questão
+  
 
 22° Questão
 #include<stdio.h>
@@ -223,6 +224,55 @@ int main(){
     printf("O MMC entre %d e %d eh: %d\n",n1,n2,n1*a);
 }
 
+  26°Questão:
+    
+    #include <stdio.h>
+
+void idadeVeia()
+{
+   int a = 0, b = 0, i = 0, j = 0;
+
+   while (j < 1)
+   {
+       i += 1;
+       a = i * 2;
+       b = i;
+       printf("\n%i", a + b);
+       if(a + b == 81)
+       {
+           i = a + b;
+           printf("\n\nCondição atendida.A = %i | B = %i | Idade = %i", a, b, a + b);
+           break;
+       }
+   }
+}
+
+
+  27°Questão:
+  
+#include <time.h>
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+void reflexo()
+{
+   clock_t start_t, end_t;
+   double total_t;
+   int i = 0, num = 0;
+   printf("Digite o numero que voce ve na tela");
+   printf("Agora!");
+   start_t = clock();
+
+   printf("%i", rand() % 100);
+   scanf("%i", &num);
+
+   end_t = clock();
+
+
+   printf("Tempo total = %d", end_t - start_t);
+}
+
 28°Questão
 #include <stdio.h>
 #include <stdlib.h>
@@ -245,7 +295,10 @@ int main (void)
   return(0);
 }
 
-29° QUESTAO
+
+
+
+29° QUESTAO:
 
 #include<stdio.h>
 #include <stdlib.h>
@@ -292,8 +345,103 @@ int main (void)
       
       return m;
     }
+    
+    30° QUESTAO:
+    
+#include <stdio.h>
+#include <string.h>
 
-33° QUESTAO
+
+void acha()
+{
+   char num[100] = {};
+   int number;
+   printf("Digite um numero");
+   scanf("%d", &number);
+
+   sprintf(num, "%d", number);
+
+
+   for (int i = 0; i < strlen(num); ++i) {
+       if(num[i] == '3'){
+           printf("Encontrei o 3 na posicao %i\n", i);
+           break;
+       }else{
+           printf("Deu ruim");
+           break;
+       }
+   }
+}
+
+
+    31° QUESTAO:
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+void achaNum()
+{
+   int num1 = 0, num2 = 0;
+   char number1[100] = {}, number2[100] = {},n1[100] = {};
+
+
+   printf("Digite o primeiro numero: ");
+   scanf("%i", &num1);
+
+   sprintf(number1, "%i", num1);
+
+   printf("Digite o segundo numero: ");
+   scanf("%i", &num2);
+
+   sprintf(number2, "%i", num2);
+
+   for (int i = 0; i <= strlen(number1);) {
+       if(number1[i] == number2[i])
+       {
+           n1[i] = number1[i];
+       }
+       i++;
+   }
+
+   puts(n1);
+}
+
+
+  32° QUESTAO
+
+#include <stdlib.h>
+#include <stdio.h>
+
+
+void start()
+{
+   int n, divisor, r, soma1, soma2;
+
+   for (n = 2; n <= 100000; n++)
+   {
+       soma1 = 1;
+       for (divisor = 2; divisor <= n/2; divisor++)
+       {
+           if (n % divisor == 0) soma1+=divisor; //calcula a soma dos divisores
+       }
+
+       soma2 = 1;
+
+       if (soma1 != n) for (divisor = 2; divisor <= soma1/2; divisor++)
+       {
+           if (soma1 % divisor == 0) soma2+=divisor; //calcula a soma dos divisores
+       }
+
+       if (soma2 == n) //verificar se a soma dos divisores eh igual ao numero
+       {
+           printf("%d e %d sao amigos\n",n, soma1);
+       }
+
+   }
+   }
+
+
+  33° QUESTãO:
 
 #include <stdio.h>
 int main ()
@@ -468,4 +616,56 @@ int main() {
         printf("Chico: %.2f\tZe: %.2f\tAno: %d\n", chico, ze, ano);
     }
     printf("Sao necessarios %d anos!\n\n", ano);
+}
+  40°QUESTAO
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void main ()
+{
+   int Segundos = 0, Velocidade0 = 2;
+
+   while(Segundos < 10){
+
+    Velocidade0 = Velocidade0 * 2;
+    Segundos += 1;
+
+    printf("Segundos:%d\n Velocidade:%d\n", Segundos, Velocidade0);
+
+
+   }
+}
+
+
+41°QUESTAO
+
+#include <stdio.h>
+float germina(int milhos){
+   int sementes = milhos  * 2;
+   int resultado_germinacao = sementes - (sementes * 0.10);
+
+   return resultado_germinacao;
+
+}
+void milho()
+{
+   float toneladas = 0.0000, toneladas_objetivo = 100000.0000;
+   int sementes = 150, i = 0;
+
+   while (i < 100)
+   {
+       float germinacao = germina(sementes);
+       if(toneladas > toneladas_objetivo){
+           printf("%i",i);
+           break;
+       }
+       toneladas += germinacao / 1000;
+
+       sementes = (int)germinacao;
+       i += 1;
+   }
+
+
+
 }
